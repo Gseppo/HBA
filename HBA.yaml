@@ -1,0 +1,26 @@
+name: HBA
+version: 0.1.0.0
+github: gseppo/HBA
+
+dependencies:
+- base >= 4.7 && < 5
+- sdl
+
+library:
+  exposed-modules:
+  - Game
+  - CPU
+  - RAM
+  - PPU
+  source-dirs:
+  - src
+
+executables:
+  HBA-exe:
+    main: Main.hs
+    source-dirs:
+    - app
+    ghc-options:
+    - -threaded
+    dependencies:
+    - HBA
